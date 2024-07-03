@@ -1598,7 +1598,7 @@ export default class App extends React.Component<AppProps, AppState> {
 
   localSetVolume = (volume: number) => {
     this.Player().setVolume(volume);
-    this.refreshControls();
+    // this.refreshControls();
   };
 
   localSubtitleModal = () => {
