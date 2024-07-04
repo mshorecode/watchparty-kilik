@@ -104,7 +104,14 @@ async function init() {
   }
 }
 
-app.use(cors());
+app.use(
+  cors({
+    origin: '*',
+    methods: 'GET,POST,PUT,DELETE,OPTIONS',
+    allowedHeaders: 'Content-Type,Authorization',
+    credentials: true,
+  }),
+);
 app.use(bodyParser.json());
 app.use(bodyParser.raw({ type: 'text/plain', limit: 1000000 }));
 
@@ -260,6 +267,7 @@ app.get('/youtubePlaylist/:playlistId', async (req, res) => {
 });
 
 app.post('/createRoom', async (req, res) => {
+  console.log('Here it is:', config.HOST);
   const genName = () => '/' + makeRoomName(config.SHARD);
   let name = genName();
   console.log('createRoom: ', name);

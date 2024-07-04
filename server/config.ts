@@ -26,7 +26,7 @@ const defaults = {
   SCW_ORGANIZATION_ID: '', // Optional, for Scaleway VMs
   SCW_GATEWAY: '', // Gateway handling SSL termination
   SCW_IMAGE: '', // ID of Scaleway snapshot image to use for vbrowser
-  DOCKER_VM_HOST: 'localhost', // Optional, for Docker VMs
+  DOCKER_VM_HOST: 'activities', // Optional, for Docker VMs
   DOCKER_VM_HOST_SSH_USER: 'root', // Optional, username for Docker host
   DOCKER_VM_HOST_SSH_KEY_BASE64: '', // Optional, private SSH key for Docker host, or default to ~/.ssh/id_rsa content
   RECAPTCHA_SECRET_KEY: '', // Optional, Recaptcha for VBrowser creation

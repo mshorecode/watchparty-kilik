@@ -24,6 +24,7 @@ export async function createRoom(
   openNewTab: boolean | undefined,
   video: string = '',
 ) {
+  console.log('HERE IS THE SERVER PATH:', serverPath);
   const uid = user?.uid;
   const token = await user?.getIdToken();
   const response = await window.fetch(serverPath + '/createRoom', {

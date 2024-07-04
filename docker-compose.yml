@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    environment:
+      - PORT=8080
+      - VITE_SERVER_HOST=http://192.168.1.203:8080
+        #      - SSL_KEY_FILE=/path/to/your/ssl/key
+        #      - SSL_CRT_FILE=/path/to/your/ssl/crt
+        #      - YOUTUBE_API_KEY=your_youtube_api_key
+        #      - VITE_FIREBASE_CONFIG=your_firebase_config
+        #      - FIREBASE_ADMIN_SDK_CONFIG=your_firebase_admin_sdk_config
+    volumes:
+      - .:/app
